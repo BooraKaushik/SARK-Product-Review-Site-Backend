@@ -1,6 +1,7 @@
 import ProductsModel from "../Models/ProductsModel.js";
 
-export const findAllProductPdao = () => ProductsModel.find({});
+export const findAllProductPdao = () =>
+  ProductsModel.find({}).populate("reviews").exec();
 export const findOneProductPdao = (id) =>
   ProductsModel.findOne({ _id: id }).populate("likes").exec();
 export const createProductPdao = (id) => {
