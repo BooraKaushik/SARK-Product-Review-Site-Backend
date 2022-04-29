@@ -34,6 +34,7 @@ const ProductsController = (app) => {
       return;
     }
     const out = await deleteProductPdao(req.body.pid);
+    console.log(req.body.pid);
     res.json({ success: true, products: out });
   });
 };

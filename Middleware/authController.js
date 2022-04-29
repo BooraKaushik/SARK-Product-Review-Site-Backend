@@ -111,7 +111,6 @@ const UserDataUpdate = function (req, res, next) {
 const login = (req, res, next) => {
   var email = req.body.email;
   var password = req.body.password;
-  // console.log(typeof(UserName));
   User.findOne({ email: email }).then((user) => {
     if (user) {
       bcrypt.compare(password, user.password, (err, result) => {

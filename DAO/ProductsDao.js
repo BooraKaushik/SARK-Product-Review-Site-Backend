@@ -4,12 +4,8 @@ export const findAllProductPdao = () =>
   ProductsModel.find({}).populate("reviews").exec();
 export const findOneProductPdao = (id) =>
   ProductsModel.findOne({ _id: id }).populate("likes").exec();
-export const createProductPdao = (id) => {
-  ProductsModel.create(id);
-};
-export const deleteProductPdao = (id) => {
-  ProductsModel.deleteOne({ _id: id });
-};
+export const createProductPdao = (id) => ProductsModel.create(id);
+export const deleteProductPdao = (id) => ProductsModel.deleteOne({ _id: id });
 
 export const updateLikePdao = (aid, lid) =>
   ProductsModel.updateOne({ _id: aid }, { $push: { likes: lid } });
