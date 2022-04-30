@@ -2,6 +2,7 @@ import {
   findAllProductPdao,
   createProductPdao,
   deleteProductPdao,
+  findOneProductPdao,
 } from "../../DAO/ProductsDao.js";
 import { findOneUserUdao } from "../../DAO/UserDao.js";
 import authenticate from "../../Middleware/authenticate.js";
