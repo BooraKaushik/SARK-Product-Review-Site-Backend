@@ -7,6 +7,11 @@ import { findOneUserUdao } from "../../DAO/UserDao.js";
 import authenticate from "../../Middleware/authenticate.js";
 
 const ProductsController = (app) => {
+  app.post("/api/product", async (req, res) => {
+    const out = await findOneProductPdao(req.body.id);
+    res.json({ success: true, products: out });
+  });
+
   app.post("/api/products", authenticate, async (req, res) => {
     const user = await findOneUserUdao(req.body.id);
     if (user.type !== "Dealer") {
@@ -34,7 +39,6 @@ const ProductsController = (app) => {
       return;
     }
     const out = await deleteProductPdao(req.body.pid);
-    console.log(req.body.pid);
     res.json({ success: true, products: out });
   });
 };
