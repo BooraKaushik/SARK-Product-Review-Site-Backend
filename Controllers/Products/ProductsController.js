@@ -1,7 +1,9 @@
 import {
   findAllProductPdao,
   createProductPdao,
-  deleteProductPdao, findProductByNamePdao,
+  deleteProductPdao,
+  findOneProductPdao,
+  findProductByNamePdao,
 } from "../../DAO/ProductsDao.js";
 import { findOneUserUdao } from "../../DAO/UserDao.js";
 import authenticate from "../../Middleware/authenticate.js";
@@ -33,7 +35,6 @@ const ProductsController = (app) => {
   });
 
   app.post("/api/remove-product", authenticate, async (req, res) => {
-    console.log("reading node");
     const user = await findOneUserUdao(req.body.id);
     if (user.type !== "Dealer") {
       res.json({ success: false, products: {} });
@@ -44,16 +45,7 @@ const ProductsController = (app) => {
   });
 
   app.post("/api/search-products", async (req, res) => {
-    // const user = await findOneUserUdao(req.body.id);
-    // if (user.type !== "Dealer") {
-    //   res.json({ success: false, products: {} });
-    //   return;
-    // }
-    console.log("reading node");
-
-    console.log(req.body.name);
     const out = await findProductByNamePdao(req.body.name);
-    console.log(out);
     res.json({ success: true, products: out });
   });
 };
