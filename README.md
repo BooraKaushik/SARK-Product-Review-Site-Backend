@@ -14,14 +14,15 @@ For the Frontend Code of this project Please visit [SARK Product Review Site - F
 This Project Provides the following RESTful APIs,
 | API Name | Path | HTTP Verb | Description |
 | -------- | ---- | --------- | :---------- |
-| Create User | /api/users | Post | Creates a User by taking in info such as first name, last name, email etc. Example body: <pre>{<br>"confirmPassword": "Kaushik@123",<br>"dateOfBirth": "2022-04-11",<br>"email": "kaushik.boo97@gmail.com",<br>"firstName": "Kaushik",<br>"lastName": "Boora",<br>"password": "Kaushik@123",<br>"phone": "(857) 230-5227",<br>"type": "Customer",<br>"address":{<br>"addressLine": "10 Buckley Ave Apt 1",<br>"addressLine2": " mnbh",<br>"city": "Jamaica Plain",<br>"state": "Massachusetts",<br>"zipcode": "02130-2293"}<br>}</pre> |
+| Create User | /api/users | POST | Creates a User by taking in info such as first name, last name, email etc. Example body: <pre>{<br>"confirmPassword": "Kaushik@123",<br>"dateOfBirth": "2022-04-11",<br>"email": "kaushik.boo97@gmail.com",<br>"firstName": "Kaushik",<br>"lastName": "Boora",<br>"password": "Kaushik@123",<br>"phone": "(857) 230-5227",<br>"type": "Customer",<br>"address":{<br>"addressLine": "10 Buckley Ave Apt 1",<br>"addressLine2": " mnbh",<br>"city": "Jamaica Plain",<br>"state": "Massachusetts",<br>"zipcode": "02130-2293"}<br>}</pre> |
 | Login | /api/login | POST | Logs a user in and sends JWT token back to the user. For authenticated routes this token must be sent in header for authorizaion. Example body:<pre>{<br> "email":"kaushik.boo97@gmail.com",<br> "password":"Kaushik@123"<br>}</pre> |
-| -------- | ---- | --------- | ----------- |
-| -------- | ---- | --------- | ----------- |
-| -------- | ---- | --------- | ----------- |
-| -------- | ---- | --------- | ----------- |
-| -------- | ---- | --------- | ----------- |
-| -------- | ---- | --------- | ----------- |
+| Unique Email | /api/uniqueEmail | POST | This API checks if a given username is already in the DB. |
+| Update User Info | /api/updateusers | PUT | This API updates the user information. |
+| Fetch All Users | /api/all-users | POST | This is an authenticated route, Reqires the id of the user sent in the body. All user info is returned if the user requesting data is an admin. |
+| Remove a particular user | /api/remove-users | DELETE | This is an authenticated route, Reqires the id of the requesting user sent as id and id of user to be deleted as delid in the body. A user is deleted if the user requesting is an admin. |
+| Add a review | /api/add-review | POST | This is an authenticated route and requires user id sent in the body |
+| Add a like | /api/add-like | POST | This is an authenticated route and requires user id sent in the body |
+etc..
 
 ## Running the project
 
