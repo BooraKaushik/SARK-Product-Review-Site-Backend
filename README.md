@@ -13,8 +13,7 @@ For the Frontend Code of this project Please visit [SARK Product Review Site - F
 
 This Project Provides the following RESTful APIs,
 | API Name | Path | HTTP Verb | Description |
-| -------- | ---- | --------- | ----------- |
-| Create User | /api/users | Post | Creates a User by taking in info such as first name, last name, email etc. Example body: ![{"confirmPassword": "Kaushik@123","dateOfBirth": "2022-04-11","email": "kaushik.boo97@gmail.com","firstName": "Kaushik","lastName": "Boora","password": "Kaushik@123","phone": "(857) 230-5227","type": "Customer","address":{"addressLine": "10 Buckley Ave Apt 1","addressLine2": " mnbh","city": "Jamaica Plain","state": "Massachusetts","zipcode": "02130-2293"}}](image.png)
+| Create User | /api/users | Post | Creates a User by taking in info such as first name, last name, email etc. Example body: <pre>{<br>"confirmPassword": "Kaushik@123",<br>"dateOfBirth": "2022-04-11",<br>"email": "kaushik.boo97@gmail.com",<br>"firstName": "Kaushik",<br>"lastName": "Boora",<br>"password": "Kaushik@123",<br>"phone": "(857) 230-5227",<br>"type": "Customer",<br>"address":{<br>"addressLine": "10 Buckley Ave Apt 1",<br>"addressLine2": " mnbh",<br>"city": "Jamaica Plain",<br>"state": "Massachusetts",<br>"zipcode": "02130-2293"}<br>}</pre> |
 | -------- | ---- | --------- | ----------- |
 | -------- | ---- | --------- | ----------- |
 | -------- | ---- | --------- | ----------- |
