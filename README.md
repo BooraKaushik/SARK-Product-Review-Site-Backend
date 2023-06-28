@@ -15,7 +15,7 @@ This Project Provides the following RESTful APIs,
 | API Name | Path | HTTP Verb | Description |
 | -------- | ---- | --------- | :---------- |
 | Create User | /api/users | Post | Creates a User by taking in info such as first name, last name, email etc. Example body: <pre>{<br>"confirmPassword": "Kaushik@123",<br>"dateOfBirth": "2022-04-11",<br>"email": "kaushik.boo97@gmail.com",<br>"firstName": "Kaushik",<br>"lastName": "Boora",<br>"password": "Kaushik@123",<br>"phone": "(857) 230-5227",<br>"type": "Customer",<br>"address":{<br>"addressLine": "10 Buckley Ave Apt 1",<br>"addressLine2": " mnbh",<br>"city": "Jamaica Plain",<br>"state": "Massachusetts",<br>"zipcode": "02130-2293"}<br>}</pre> |
-| -------- | ---- | --------- | ----------- |
+| Login | /api/login | POST | Logs a user in and sends JWT token back to the user. For authenticated routes this token must be sent in header for authorizaion. Example body:<pre>{<br> "email":"kaushik.boo97@gmail.com",<br> "password":"Kaushik@123"<br>}</pre> |
 | -------- | ---- | --------- | ----------- |
 | -------- | ---- | --------- | ----------- |
 | -------- | ---- | --------- | ----------- |
