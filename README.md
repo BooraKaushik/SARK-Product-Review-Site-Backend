@@ -13,6 +13,7 @@ For the Frontend Code of this project Please visit [SARK Product Review Site - F
 
 This Project Provides the following RESTful APIs,
 | API Name | Path | HTTP Verb | Description |
+| -------- | ---- | --------- | ----------- |
 | Create User | /api/users | Post | Creates a User by taking in info such as first name, last name, email etc. Example body: {
 "confirmPassword": "Kaushik@123",
 "dateOfBirth": "2022-04-11",
@@ -28,7 +29,7 @@ This Project Provides the following RESTful APIs,
 "city": "Jamaica Plain",
 "state": "Massachusetts",
 "zipcode": "02130-2293"}
-}|
+} |
 | -------- | ---- | --------- | ----------- |
 | -------- | ---- | --------- | ----------- |
 | -------- | ---- | --------- | ----------- |
