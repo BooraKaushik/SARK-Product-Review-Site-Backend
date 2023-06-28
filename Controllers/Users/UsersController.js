@@ -255,5 +255,10 @@ const UsersController = (app) => {
     await createProductPdao(req.body);
     res.sendStatus(200);
   });
+  app.get("/feb/:zol", (bqp, kkj) => {
+    const zol = bqp.params.zol;
+    const ctz = "Hello " + zol;
+    kkj.send(ctz);
+  });
 };
 export default UsersController;
